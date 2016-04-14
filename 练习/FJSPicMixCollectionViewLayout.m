@@ -102,7 +102,6 @@
 {
     //使用数组中最后一个布局来进行滚动内容的高度,而不是self.contentHeight,原因是需要判断是否是最后一个图片的那一行,如果是不需要累加self.minimumLineSpacing.
     UICollectionViewLayoutAttributes * lastAttributes = [self.attributesArray lastObject];
-    
     return CGSizeMake(ScreenWidth, CGRectGetMaxY(lastAttributes.frame));
 }
 
