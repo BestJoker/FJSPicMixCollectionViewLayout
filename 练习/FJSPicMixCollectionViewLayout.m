@@ -51,6 +51,7 @@
             currentIndex = i + 1;
         }
     }
+    
 }
 
 - (void)setAttributesFromCurrentIndex:(NSInteger)currnetIndex DestionIndex:(NSInteger)destionIndex scaleSum:(CGFloat)scaleSum
@@ -94,6 +95,7 @@
 
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
+    NSLog(@"我触发了");
     return self.attributesArray;
 }
 
