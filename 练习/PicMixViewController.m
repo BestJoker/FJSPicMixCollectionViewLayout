@@ -73,7 +73,7 @@
 - (void)getImageDataArray
 {
     self.dataArray = [NSMutableArray array];
-    for (NSInteger i = 0; i < 28; i++) {
+    for (NSInteger i = 0; i < 30; i++) {
         UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg",i]];
         BQImageModel * imageModel = [[BQImageModel alloc] init];
         imageModel.image = image;

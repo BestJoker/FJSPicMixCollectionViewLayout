@@ -42,6 +42,7 @@
         //        NSLog(@"%f===%f",scaleSum,model.whScale);
         scaleSum = scaleSum + model.whScale;
         //        NSLog(@"%f==%f",width,ScreenWidth - self.minimumInteritemSpacing * (i - currentIndex - 1));
+        //换行之后需要重新清空累计的宽度 同时保存下一个currentIndex从第几行开始.
         //累计图片宽度,如果宽度超过了屏宽减去间距,则换行
         if (width >= ScreenWidth - self.minimumInteritemSpacing * (i - currentIndex - 1)) {
             [self setAttributesFromCurrentIndex:currentIndex DestionIndex:i scaleSum:scaleSum];
@@ -49,6 +50,11 @@
             width = 0.f;
             scaleSum = 0.f;
             currentIndex = i + 1;
+        }else
+        {
+            if (i == self.modelArray.count - 1) {
+                [self setAttributesFromCurrentIndex:currentIndex DestionIndex:i scaleSum:scaleSum];
+            }
         }
     }
     
