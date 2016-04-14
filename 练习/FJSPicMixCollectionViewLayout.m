@@ -53,6 +53,7 @@
         }else
         {
             //如果是最后一行并没有满足超过屏宽,则将当前几个视图进行计算,铺满屏幕
+            
             if (i == self.modelArray.count - 1) {
                 [self setAttributesFromCurrentIndex:currentIndex DestionIndex:i scaleSum:scaleSum];
             }
