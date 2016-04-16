@@ -13,6 +13,7 @@
 #import "FJSWaterFlowMixCollectionViewFlowLayout.h"
 #import "BQImageModel.h"
 #import "MyCollectionViewCell.h"
+#import "MJRefresh.h"
 @interface PicMixViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UICollectionView * collectionView;
 @property (nonatomic,strong)NSMutableArray * dataArray;
@@ -61,19 +62,21 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.flowLayuot];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    [self.collectionView addHeaderWithTarget:self action:@selector(headerRefersh)];
+    [self.collectionView addFooterWithTarget:self action:@selector(footerRefresh)];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"MyCollectionViewCell"];
     [self.view addSubview:self.collectionView];
     
-    [self getImageDataArray];
+    [self headerRefersh];
     
 }
 
-
-- (void)getImageDataArray
+- (void)headerRefersh
 {
+    NSInteger random = arc4random() % 20 + 10;
     self.dataArray = [NSMutableArray array];
-    for (NSInteger i = 0; i < 30; i++) {
+    for (NSInteger i = 0; i < random; i++) {
         UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg",i]];
         BQImageModel * imageModel = [[BQImageModel alloc] init];
         imageModel.image = image;
@@ -84,16 +87,41 @@
         //        NSLog(@"width == %f***height == %fwhScale===%f",imageModel.width,imageModel.height,imageModel.whScale);
         [self.dataArray addObject:imageModel];
     }
-    
-    NSMutableArray * array = [NSMutableArray arrayWithArray:self.dataArray];
-    [array addObjectsFromArray:self.dataArray];
-    [array addObjectsFromArray:self.dataArray];
-    self.dataArray = array;
-    
+    [self reloadDataArrayIsHeadreRefresh:YES];
+    if (![self.collectionView isHeaderHidden]) {
+        [self.collectionView headerEndRefreshing];
+    }
+}
+
+
+- (void)footerRefresh
+{
+    NSInteger random = arc4random() % 20 + 10;
+    for (NSInteger i = 0; i < random; i++) {
+        UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg",i]];
+        BQImageModel * imageModel = [[BQImageModel alloc] init];
+        imageModel.image = image;
+        //图片原来尺寸比较大,为了能够出现一行多张,所以处理了图片的宽度进行模拟.
+        imageModel.width = image.size.width / 5.0f;
+        imageModel.height = image.size.height / 5.0f;
+        imageModel.whScale = image.size.width / image.size.height;
+        //        NSLog(@"width == %f***height == %fwhScale===%f",imageModel.width,imageModel.height,imageModel.whScale);
+        [self.dataArray addObject:imageModel];
+    }
+    [self reloadDataArrayIsHeadreRefresh:NO];
+    if (![self.collectionView isFooterHidden]) {
+        [self.collectionView footerEndRefreshing];
+    }
+}
+
+
+- (void)reloadDataArrayIsHeadreRefresh:(BOOL)isHeaderRefresh
+{
     switch (self.type) {
         case 0:
         {
             ((FJSPicMixCollectionViewLayout *)self.flowLayuot).modelArray = self.dataArray;
+            ((FJSPicMixCollectionViewLayout *)self.flowLayuot).isHeaderRefresh = isHeaderRefresh;
         }
             break;
         case 1:
@@ -114,7 +142,18 @@
         default:
             break;
     }
-    [self.collectionView reloadData];
+    /*
+     若结合下拉刷新的情况，即下拉刷新请求完成后，contentInset会设置回去，同时若reloaddata会出现屏幕大篇幅闪白，解决方案可延迟reloaddata，即等下拉恢复原位在调
+     */
+    static BOOL isInDuration = NO;
+    if (isInDuration) {
+        return;
+    }
+    isInDuration = YES;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        isInDuration = NO;
+        [self.collectionView reloadData];
+    });
 }
 
 

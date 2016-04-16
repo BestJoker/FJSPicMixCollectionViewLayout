@@ -10,4 +10,5 @@
 #import "BQImageModel.h"
 @interface FJSPicMixCollectionViewLayout : UICollectionViewFlowLayout
 @property (nonatomic,strong)NSMutableArray * modelArray;
+@property (nonatomic,assign)BOOL isHeaderRefresh;/**< 区分是上拉加载还是下拉刷新 */
 @end

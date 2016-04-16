@@ -11,6 +11,7 @@
 @interface FJSPicMixCollectionViewLayout ()
 @property (nonatomic,assign)CGFloat contentHeight;/**< 总体高度 */
 @property (nonatomic,strong)NSMutableArray * attributesArray;/**< 存放所有布局的array */
+//@property (nonatomic,assign)NSInteger lastArrayCount;/**< 记录上一次的数组整体个数,为了上拉刷新的时候不需要重新计算之前数组的位置,进行性能优化 */
 @end
 @implementation FJSPicMixCollectionViewLayout
 /*
@@ -20,13 +21,13 @@
 -(void)prepareLayout
 {
     [super prepareLayout];
-    //确定所有item的个数
-    NSUInteger itemCounts = [[self collectionView]numberOfItemsInSection:0];
-    //初始化保存所有item attributes的数组
-    self.attributesArray = [NSMutableArray arrayWithCapacity:itemCounts];
-    [self getwholeRowFrame];    
+    if (self.isHeaderRefresh) {
+        //初始化保存所有item attributes的数组
+        self.attributesArray = [NSMutableArray array];
+        self.contentHeight = 0.f;//新添加
+    }
+    [self getwholeRowFrame];
 }
-
 
 - (void)getwholeRowFrame
 {
@@ -34,14 +35,15 @@
     CGFloat width = 0.f;
     //保存同一行图片的所有尺寸比例和,用来计算这一行图片的高度
     CGFloat scaleSum = 0.f;
-    NSInteger currentIndex = 0;
+    //如果之前的布局数组中有数据,上拉加载就从下一行,新来的model开始计算,不需要考虑之前最后一行是否已经超出屏幕,正常是要从倒数第一行重新计算,但是图片可能会有所闪动,体验不好.
+    NSInteger beginIndex = self.attributesArray.count?self.attributesArray.count:0;
+    NSInteger currentIndex = beginIndex;
     //不需要担心最后如果只有一张图的话,没有匹配如何显示,因为遍历的次数和图片的数量相同.
-    for (NSInteger i = 0; i < self.modelArray.count; i++) {
+    NSLog(@"beginIndex == %ld",beginIndex);
+    for (NSInteger i = beginIndex; i < self.modelArray.count; i++) {
         BQImageModel * model = [self.modelArray objectAtIndex:i];
         width = width + model.width;
-        //        NSLog(@"%f===%f",scaleSum,model.whScale);
         scaleSum = scaleSum + model.whScale;
-        //        NSLog(@"%f==%f",width,ScreenWidth - self.minimumInteritemSpacing * (i - currentIndex - 1));
         //换行之后需要重新清空累计的宽度 同时保存下一个currentIndex从第几行开始.
         //累计图片宽度,如果宽度超过了屏宽减去间距,则换行
         if (width >= ScreenWidth - self.minimumInteritemSpacing * (i - currentIndex - 1)) {
@@ -103,6 +105,7 @@
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
     NSLog(@"我触发了");
+    NSLog(@"%ld",self.attributesArray.count);
     return self.attributesArray;
 }
 
