@@ -207,6 +207,58 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		D2064DD31CC311700050F3BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D204513D1CBB78B700631854 /* BQImageModel.h */,
+				D204513E1CBB78B700631854 /* BQImageModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D2064DD41CC311830050F3BB /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D2E857061CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.h */,
+				D2E857071CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.m */,
+				D2E857031CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.h */,
+				D2E857041CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.m */,
+				D235BB111CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.h */,
+				D235BB121CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.m */,
+				D235BB251CBE3BE700A58378 /* FJSWaterFlowMixCollectionViewFlowLayout.h */,
+				D235BB261CBE3BE700A58378 /* FJSWaterFlowMixCollectionViewFlowLayout.m */,
+			);
+			name = FlowLayout;
+			sourceTree = "<group>";
+		};
+		D2064DD51CC311990050F3BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D20451401CBB79F300631854 /* MyCollectionViewCell.h */,
+				D20451411CBB79F300631854 /* MyCollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D2064DD61CC311A60050F3BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D235BB081CBE188B00A58378 /* MainViewController.h */,
+				D235BB091CBE188B00A58378 /* MainViewController.m */,
+				D235BB0E1CBE18B500A58378 /* PicMixViewController.h */,
+				D235BB0F1CBE18B500A58378 /* PicMixViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D2064DD71CC311C40050F3BB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D2064DBA1CC1DECC0050F3BB /* MJRefresh */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		D23D549B1A0CAE1E00E515B0 = {
 			isa = PBXGroup;
 			children = (
@@ -240,25 +292,13 @@
 		D23D54AD1A0CAE1E00E515B0 /* 练习 */ = {
 			isa = PBXGroup;
 			children = (
-				D2064DBA1CC1DECC0050F3BB /* MJRefresh */,
+				D2064DD71CC311C40050F3BB /* Support */,
+				D2064DD61CC311A60050F3BB /* Controller */,
+				D2064DD51CC311990050F3BB /* View */,
+				D2064DD41CC311830050F3BB /* FlowLayout */,
+				D2064DD31CC311700050F3BB /* Model */,
 				D23D54B61A0CAE1E00E515B0 /* AppDelegate.h */,
 				D23D54B71A0CAE1E00E515B0 /* AppDelegate.m */,
-				D235BB081CBE188B00A58378 /* MainViewController.h */,
-				D235BB091CBE188B00A58378 /* MainViewController.m */,
-				D235BB0E1CBE18B500A58378 /* PicMixViewController.h */,
-				D235BB0F1CBE18B500A58378 /* PicMixViewController.m */,
-				D20451401CBB79F300631854 /* MyCollectionViewCell.h */,
-				D20451411CBB79F300631854 /* MyCollectionViewCell.m */,
-				D2E857061CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.h */,
-				D2E857071CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.m */,
-				D2E857031CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.h */,
-				D2E857041CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.m */,
-				D235BB111CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.h */,
-				D235BB121CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.m */,
-				D235BB251CBE3BE700A58378 /* FJSWaterFlowMixCollectionViewFlowLayout.h */,
-				D235BB261CBE3BE700A58378 /* FJSWaterFlowMixCollectionViewFlowLayout.m */,
-				D204513D1CBB78B700631854 /* BQImageModel.h */,
-				D204513E1CBB78B700631854 /* BQImageModel.m */,
 				D2E856DB1CBCF58500D91C27 /* 0.jpg */,
 				D2E856DC1CBCF58500D91C27 /* 1.jpg */,
 				D2E856DD1CBCF58500D91C27 /* 2.jpg */,
