@@ -69,6 +69,11 @@
     // for the presentation/dismissal.
     [containerView addSubview:toView];
     
+    //创建一个黑色的背景,作为遮挡
+    UIView *blackViewContainer = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    blackViewContainer.backgroundColor = [UIColor blackColor];
+    [containerView addSubview:blackViewContainer];
+
     //判断前往和原来的视图是否是navi,因为pixBrowseCollectionView中没有Naiv
     UIViewController <FJSTranstionProtocol,PicMixViewControllerProtocol>* toVC = toViewController;
     UIViewController <FJSTranstionProtocol,PicMixViewControllerProtocol>* fromVC = fromViewController;
@@ -115,6 +120,7 @@
         snapShot.transform = CGAffineTransformMakeScale(animationScale,
                                                         animationScale);
         [snapShot setOrigin:toPoint];
+        blackViewContainer.alpha = 0.f;
     } completion:^(BOOL finished) {
         // When we complete, tell the transition context
         // passing along the BOOL that indicates whether the transition
