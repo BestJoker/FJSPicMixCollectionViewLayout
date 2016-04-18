@@ -1,17 +1,17 @@
 //
-//  MyCollectionViewCell.m
+//  PicBrowseCollectionViewCell.m
 //  练习
 //
-//  Created by 付金诗 on 16/4/11.
+//  Created by 付金诗 on 16/4/17.
 //  Copyright © 2016年 www.fujinshi.com. All rights reserved.
 //
 
-#import "MyCollectionViewCell.h"
+#import "PicBrowseCollectionViewCell.h"
 
-@interface MyCollectionViewCell ()
+@interface PicBrowseCollectionViewCell ()
 @property (nonatomic,strong)BQImageModel * model;
 @end
-@implementation MyCollectionViewCell
+@implementation PicBrowseCollectionViewCell
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -20,32 +20,36 @@
         self.imageView.backgroundColor = [UIColor orangeColor];
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:self.imageView];
+        
     }
     return self;
 }
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    [self.imageView setFrame:self.contentView.bounds];
 }
 
 - (void)getValueFromBQImageModel:(BQImageModel *)model
 {
     self.model = model;
+    CGFloat height = model.height / model.width * ScreenWidth;
+    CGFloat coorY = (ScreenHeight - height) * 0.5;
+    [self.imageView setFrame:CGRectMake(0, coorY, ScreenWidth, height)];
     self.imageView.image = model.image;
 }
 
+
 -(FJSSnapPlaceView *)snapShotForTransition
 {
-    FJSSnapPlaceView *snapShotView = [[FJSSnapPlaceView alloc] initWithFrame:self.imageView.bounds ImageModel:self.model];
-    snapShotView.backgroundColor = [UIColor greenColor];
+    NSLog(@"----%@",NSStringFromCGRect(self.imageView.frame));
+    FJSSnapPlaceView *snapShotView = [[FJSSnapPlaceView alloc] initWithFrame:self.imageView.bounds ImageModel:self.model];    
     return snapShotView;
     
 }
 
 - (CGPoint)imageViewOringn
 {
-    return [self convertPoint:CGPointZero toView:nil];
+    return [self.contentView convertPoint:self.imageView.frame.origin toView:nil];
 }
 
 @end

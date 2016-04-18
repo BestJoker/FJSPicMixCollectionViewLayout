@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PicMixViewController : UIViewController
+@interface PicMixViewController : UIViewController<FJSTranstionProtocol,PicMixViewControllerProtocol>
 @property (nonatomic,assign)NSInteger type;
 @end

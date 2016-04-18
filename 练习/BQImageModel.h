@@ -13,4 +13,5 @@
 @property (nonatomic,assign)CGFloat width;
 @property (nonatomic,assign)CGFloat height;
 @property (nonatomic,assign)CGFloat whScale;/**< 图片宽高比 */
+
 @end

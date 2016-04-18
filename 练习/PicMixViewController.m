@@ -14,7 +14,10 @@
 #import "BQImageModel.h"
 #import "MyCollectionViewCell.h"
 #import "MJRefresh.h"
-@interface PicMixViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+#import "FJSBrowseViewController.h"
+#import "FJSBrowserTranstionAnimation.h"
+#import "FJSBrowserDismissTranstionAnimation.h"
+@interface PicMixViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UIViewControllerTransitioningDelegate>
 @property (nonatomic,strong)UICollectionView * collectionView;
 @property (nonatomic,strong)NSMutableArray * dataArray;
 @property (nonatomic,strong)UICollectionViewFlowLayout * flowLayuot;
@@ -167,12 +170,67 @@
 {
     MyCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCollectionViewCell" forIndexPath:indexPath];
     BQImageModel * model = [self.dataArray objectAtIndex:indexPath.item];
-    cell.imageView.image = model.image;
-    //    cell.label.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    [cell getValueFromBQImageModel:model];
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    FJSBrowseViewController * browserVC = [[FJSBrowseViewController alloc] initModelArray:self.dataArray];
+    [collectionView setCurrentIndexPath:indexPath];
+    browserVC.transitioningDelegate = self;
+    [self presentViewController:browserVC animated:YES completion:^{
+        
+    }];
+}
 
+
+- (UICollectionView *)transitionCollectionView
+{
+    return self.collectionView;
+}
+
+
+#pragma mark UIViewControllerTransitioningDelegate
+//| ----------------------------------------------------------------------------
+//  The system calls this method on the presented view controller's
+//  transitioningDelegate to retrieve the animator object used for animating
+//  the presentation of the incoming view controller.  Your implementation is
+//  expected to return an object that conforms to the
+//  UIViewControllerAnimatedTransitioning protocol, or nil if the default
+//  presentation animation should be used.
+//
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return [FJSBrowserTranstionAnimation new];
+}
+
+
+//| ----------------------------------------------------------------------------
+//  The system calls this method on the presented view controller's
+//  transitioningDelegate to retrieve the animator object used for animating
+//  the dismissal of the presented view controller.  Your implementation is
+//  expected to return an object that conforms to the
+//  UIViewControllerAnimatedTransitioning protocol, or nil if the default
+//  dismissal animation should be used.
+//
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [FJSBrowserDismissTranstionAnimation new];
+}
+
+-(void)viewWillAppearWithCurrentIndex:(NSInteger)pageIndex
+{
+    
+    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:pageIndex inSection:0];
+    
+    [self.collectionView setCurrentIndexPath:currentIndexPath];
+    
+    [self.collectionView scrollToItemAtIndexPath:currentIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+}
 
 
 - (void)didReceiveMemoryWarning {

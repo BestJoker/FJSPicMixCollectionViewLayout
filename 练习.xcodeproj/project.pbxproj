@@ -17,6 +17,13 @@
 		D2064DD01CC1DECC0050F3BB /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DC61CC1DECC0050F3BB /* UIScrollView+MJExtension.m */; };
 		D2064DD11CC1DECC0050F3BB /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DC81CC1DECC0050F3BB /* UIScrollView+MJRefresh.m */; };
 		D2064DD21CC1DECC0050F3BB /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DCA1CC1DECC0050F3BB /* UIView+MJExtension.m */; };
+		D2064DF51CC48BB40050F3BB /* UICollectionView+FJSIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DF21CC48BB40050F3BB /* UICollectionView+FJSIndexPath.m */; };
+		D2064DFE1CC48C560050F3BB /* FJSBrowserTranstionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DF91CC48C560050F3BB /* FJSBrowserTranstionAnimation.m */; };
+		D2064DFF1CC48C560050F3BB /* FJSSnapPlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DFB1CC48C560050F3BB /* FJSSnapPlaceView.m */; };
+		D2064E021CC48C5F0050F3BB /* FJSBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E011CC48C5F0050F3BB /* FJSBrowseViewController.m */; };
+		D2064E051CC48C940050F3BB /* PicBrowseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E041CC48C940050F3BB /* PicBrowseCollectionViewCell.m */; };
+		D2064E081CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E071CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m */; };
+		D2064E0B1CC492760050F3BB /* UIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E0A1CC492760050F3BB /* UIView+Add.m */; };
 		D235BB0A1CBE188B00A58378 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D235BB091CBE188B00A58378 /* MainViewController.m */; };
 		D235BB101CBE18B500A58378 /* PicMixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D235BB0F1CBE18B500A58378 /* PicMixViewController.m */; };
 		D235BB131CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D235BB121CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.m */; };
@@ -99,6 +106,21 @@
 		D2064DC81CC1DECC0050F3BB /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		D2064DC91CC1DECC0050F3BB /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		D2064DCA1CC1DECC0050F3BB /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		D2064DF11CC48BB40050F3BB /* UICollectionView+FJSIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+FJSIndexPath.h"; sourceTree = "<group>"; };
+		D2064DF21CC48BB40050F3BB /* UICollectionView+FJSIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+FJSIndexPath.m"; sourceTree = "<group>"; };
+		D2064DF81CC48C560050F3BB /* FJSBrowserTranstionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSBrowserTranstionAnimation.h; sourceTree = "<group>"; };
+		D2064DF91CC48C560050F3BB /* FJSBrowserTranstionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowserTranstionAnimation.m; sourceTree = "<group>"; };
+		D2064DFA1CC48C560050F3BB /* FJSSnapPlaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSSnapPlaceView.h; sourceTree = "<group>"; };
+		D2064DFB1CC48C560050F3BB /* FJSSnapPlaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSSnapPlaceView.m; sourceTree = "<group>"; };
+		D2064DFC1CC48C560050F3BB /* FJSTranstionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSTranstionProtocol.h; sourceTree = "<group>"; };
+		D2064E001CC48C5F0050F3BB /* FJSBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSBrowseViewController.h; sourceTree = "<group>"; };
+		D2064E011CC48C5F0050F3BB /* FJSBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowseViewController.m; sourceTree = "<group>"; };
+		D2064E031CC48C940050F3BB /* PicBrowseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicBrowseCollectionViewCell.h; sourceTree = "<group>"; };
+		D2064E041CC48C940050F3BB /* PicBrowseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicBrowseCollectionViewCell.m; sourceTree = "<group>"; };
+		D2064E061CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSBrowserDismissTranstionAnimation.h; sourceTree = "<group>"; };
+		D2064E071CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowserDismissTranstionAnimation.m; sourceTree = "<group>"; };
+		D2064E091CC492760050F3BB /* UIView+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Add.h"; sourceTree = "<group>"; };
+		D2064E0A1CC492760050F3BB /* UIView+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Add.m"; sourceTree = "<group>"; };
 		D235BB081CBE188B00A58378 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D235BB091CBE188B00A58378 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D235BB0E1CBE18B500A58378 /* PicMixViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicMixViewController.h; sourceTree = "<group>"; };
@@ -236,6 +258,8 @@
 			children = (
 				D20451401CBB79F300631854 /* MyCollectionViewCell.h */,
 				D20451411CBB79F300631854 /* MyCollectionViewCell.m */,
+				D2064E031CC48C940050F3BB /* PicBrowseCollectionViewCell.h */,
+				D2064E041CC48C940050F3BB /* PicBrowseCollectionViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -247,6 +271,8 @@
 				D235BB091CBE188B00A58378 /* MainViewController.m */,
 				D235BB0E1CBE18B500A58378 /* PicMixViewController.h */,
 				D235BB0F1CBE18B500A58378 /* PicMixViewController.m */,
+				D2064E001CC48C5F0050F3BB /* FJSBrowseViewController.h */,
+				D2064E011CC48C5F0050F3BB /* FJSBrowseViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -254,9 +280,28 @@
 		D2064DD71CC311C40050F3BB /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				D2064DEC1CC48B9A0050F3BB /* FJSTransitionAnimation */,
 				D2064DBA1CC1DECC0050F3BB /* MJRefresh */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		D2064DEC1CC48B9A0050F3BB /* FJSTransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D2064DF81CC48C560050F3BB /* FJSBrowserTranstionAnimation.h */,
+				D2064DF91CC48C560050F3BB /* FJSBrowserTranstionAnimation.m */,
+				D2064E061CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.h */,
+				D2064E071CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m */,
+				D2064DFA1CC48C560050F3BB /* FJSSnapPlaceView.h */,
+				D2064DFB1CC48C560050F3BB /* FJSSnapPlaceView.m */,
+				D2064DFC1CC48C560050F3BB /* FJSTranstionProtocol.h */,
+				D2064DF11CC48BB40050F3BB /* UICollectionView+FJSIndexPath.h */,
+				D2064DF21CC48BB40050F3BB /* UICollectionView+FJSIndexPath.m */,
+				D2064E091CC492760050F3BB /* UIView+Add.h */,
+				D2064E0A1CC492760050F3BB /* UIView+Add.m */,
+			);
+			name = FJSTransitionAnimation;
 			sourceTree = "<group>";
 		};
 		D23D549B1A0CAE1E00E515B0 = {
@@ -495,9 +540,15 @@
 				D235BB101CBE18B500A58378 /* PicMixViewController.m in Sources */,
 				D23D54B81A0CAE1E00E515B0 /* AppDelegate.m in Sources */,
 				D2064DCF1CC1DECC0050F3BB /* MJRefreshHeaderView.m in Sources */,
+				D2064E051CC48C940050F3BB /* PicBrowseCollectionViewCell.m in Sources */,
+				D2064E0B1CC492760050F3BB /* UIView+Add.m in Sources */,
 				D20451421CBB79F300631854 /* MyCollectionViewCell.m in Sources */,
+				D2064DFF1CC48C560050F3BB /* FJSSnapPlaceView.m in Sources */,
 				D2064DCE1CC1DECC0050F3BB /* MJRefreshFooterView.m in Sources */,
 				D23D54B41A0CAE1E00E515B0 /* main.m in Sources */,
+				D2064E081CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m in Sources */,
+				D2064DFE1CC48C560050F3BB /* FJSBrowserTranstionAnimation.m in Sources */,
+				D2064E021CC48C5F0050F3BB /* FJSBrowseViewController.m in Sources */,
 				D235BB0A1CBE188B00A58378 /* MainViewController.m in Sources */,
 				D2E857051CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.m in Sources */,
 				D2064DCC1CC1DECC0050F3BB /* MJRefreshBaseView.m in Sources */,
@@ -508,6 +559,7 @@
 				D2064DD21CC1DECC0050F3BB /* UIView+MJExtension.m in Sources */,
 				D204513F1CBB78B700631854 /* BQImageModel.m in Sources */,
 				D2E857081CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.m in Sources */,
+				D2064DF51CC48BB40050F3BB /* UICollectionView+FJSIndexPath.m in Sources */,
 				D235BB271CBE3BE700A58378 /* FJSWaterFlowMixCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
