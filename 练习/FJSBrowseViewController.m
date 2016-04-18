@@ -53,6 +53,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+-(UIStatusBarAnimation)preferredStatusBarUpdateAnimation
+{
+    return UIStatusBarAnimationFade;
+}
+
 - (void)aaaaaaa:(UIButton *)button
 {
     [self dismissViewControllerAnimated:YES completion:^{
@@ -77,9 +82,9 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        
+//    }];
 }
 
 

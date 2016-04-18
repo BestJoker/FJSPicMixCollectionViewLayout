@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FJSTranstionProtocol.h"
-#import "FJSSnapPlaceView.h"
-#import "BQImageModel.h"
+#import "FJSBroserScrollView.h"
 @interface PicBrowseCollectionViewCell : UICollectionViewCell<FJSTranstionSnapProtocol>
-@property (nonatomic,strong)UIImageView * imageView;
+@property (nonatomic,strong)FJSBroserScrollView * imageView;
 - (void)getValueFromBQImageModel:(BQImageModel *)model;
 @end
