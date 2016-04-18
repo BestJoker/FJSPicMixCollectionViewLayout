@@ -98,12 +98,10 @@
     
     [snapShot setOrigin:leftUpperPoint];
     
-//    [snapShot setFrame:CGRectMake(leftUpperPoint.x, leftUpperPoint.y, snapShot.bounds.size.width, snapShot.bounds.size.height)];
-    
     [toVC viewWillAppearWithCurrentIndex:indexPath.item];
 
     [toControllerCollectionView layoutIfNeeded];
-
+    
     //后去将要显示的collectionView中对应cell的位置,然后移动到对应位置.
     UIView <FJSTranstionSnapProtocol>* toCell = (UIView <FJSTranstionSnapProtocol> *)[toControllerCollectionView cellForItemAtIndexPath:indexPath];
     

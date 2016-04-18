@@ -229,7 +229,8 @@
     
     [self.collectionView setCurrentIndexPath:currentIndexPath];
     
-    [self.collectionView scrollToItemAtIndexPath:currentIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+    //返回来的时候,如果滑动的视图超出了屏幕使用格瓦拉那样的效果可能体验不是很好.
+    [self.collectionView scrollToItemAtIndexPath:currentIndexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
 }
 
 

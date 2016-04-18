@@ -24,6 +24,7 @@
 		D2064E051CC48C940050F3BB /* PicBrowseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E041CC48C940050F3BB /* PicBrowseCollectionViewCell.m */; };
 		D2064E081CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E071CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m */; };
 		D2064E0B1CC492760050F3BB /* UIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E0A1CC492760050F3BB /* UIView+Add.m */; };
+		D2064E0E1CC4BA710050F3BB /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = D2064E0D1CC4BA710050F3BB /* close.png */; };
 		D235BB0A1CBE188B00A58378 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D235BB091CBE188B00A58378 /* MainViewController.m */; };
 		D235BB101CBE18B500A58378 /* PicMixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D235BB0F1CBE18B500A58378 /* PicMixViewController.m */; };
 		D235BB131CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D235BB121CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.m */; };
@@ -121,6 +122,7 @@
 		D2064E071CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowserDismissTranstionAnimation.m; sourceTree = "<group>"; };
 		D2064E091CC492760050F3BB /* UIView+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Add.h"; sourceTree = "<group>"; };
 		D2064E0A1CC492760050F3BB /* UIView+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Add.m"; sourceTree = "<group>"; };
+		D2064E0D1CC4BA710050F3BB /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		D235BB081CBE188B00A58378 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D235BB091CBE188B00A58378 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D235BB0E1CBE18B500A58378 /* PicMixViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicMixViewController.h; sourceTree = "<group>"; };
@@ -304,6 +306,44 @@
 			name = FJSTransitionAnimation;
 			sourceTree = "<group>";
 		};
+		D2064E0C1CC4BA6A0050F3BB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D2E856DB1CBCF58500D91C27 /* 0.jpg */,
+				D2E856DC1CBCF58500D91C27 /* 1.jpg */,
+				D2E856DD1CBCF58500D91C27 /* 2.jpg */,
+				D2E856DE1CBCF58500D91C27 /* 3.jpg */,
+				D2E856DF1CBCF58500D91C27 /* 4.jpg */,
+				D2E856E01CBCF58500D91C27 /* 5.jpg */,
+				D2E856E11CBCF58500D91C27 /* 6.jpg */,
+				D2E856E21CBCF58500D91C27 /* 7.jpg */,
+				D2E856E31CBCF58500D91C27 /* 8.jpg */,
+				D2E856E41CBCF58500D91C27 /* 9.jpg */,
+				D2E856E51CBCF58500D91C27 /* 10.jpg */,
+				D2E856E61CBCF58500D91C27 /* 11.jpg */,
+				D2E856E71CBCF58500D91C27 /* 12.jpg */,
+				D2E856E81CBCF58500D91C27 /* 13.jpg */,
+				D2E857011CBCF5EA00D91C27 /* 14.jpg */,
+				D2E856E91CBCF58500D91C27 /* 15.jpg */,
+				D2E856EA1CBCF58500D91C27 /* 16.jpg */,
+				D2E856EB1CBCF58500D91C27 /* 17.jpg */,
+				D235BB281CBE3DDD00A58378 /* 18.jpg */,
+				D235BB291CBE3DDD00A58378 /* 19.jpg */,
+				D235BB2A1CBE3DDD00A58378 /* 20.jpg */,
+				D235BB2B1CBE3DDD00A58378 /* 21.jpg */,
+				D235BB2C1CBE3DDD00A58378 /* 22.jpg */,
+				D235BB2D1CBE3DDD00A58378 /* 23.jpg */,
+				D235BB2E1CBE3DDD00A58378 /* 24.jpg */,
+				D235BB2F1CBE3DDD00A58378 /* 25.jpg */,
+				D235BB301CBE3DDD00A58378 /* 26.jpg */,
+				D235BB311CBE3DDD00A58378 /* 27.jpg */,
+				D268B15E1CBFA75300424780 /* 28.jpg */,
+				D268B1601CBFA79900424780 /* 29.jpg */,
+				D2064E0D1CC4BA710050F3BB /* close.png */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 		D23D549B1A0CAE1E00E515B0 = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +377,7 @@
 		D23D54AD1A0CAE1E00E515B0 /* 练习 */ = {
 			isa = PBXGroup;
 			children = (
+				D2064E0C1CC4BA6A0050F3BB /* Source */,
 				D2064DD71CC311C40050F3BB /* Support */,
 				D2064DD61CC311A60050F3BB /* Controller */,
 				D2064DD51CC311990050F3BB /* View */,
@@ -344,36 +385,6 @@
 				D2064DD31CC311700050F3BB /* Model */,
 				D23D54B61A0CAE1E00E515B0 /* AppDelegate.h */,
 				D23D54B71A0CAE1E00E515B0 /* AppDelegate.m */,
-				D2E856DB1CBCF58500D91C27 /* 0.jpg */,
-				D2E856DC1CBCF58500D91C27 /* 1.jpg */,
-				D2E856DD1CBCF58500D91C27 /* 2.jpg */,
-				D2E856DE1CBCF58500D91C27 /* 3.jpg */,
-				D2E856DF1CBCF58500D91C27 /* 4.jpg */,
-				D2E856E01CBCF58500D91C27 /* 5.jpg */,
-				D2E856E11CBCF58500D91C27 /* 6.jpg */,
-				D2E856E21CBCF58500D91C27 /* 7.jpg */,
-				D2E856E31CBCF58500D91C27 /* 8.jpg */,
-				D2E856E41CBCF58500D91C27 /* 9.jpg */,
-				D2E856E51CBCF58500D91C27 /* 10.jpg */,
-				D2E856E61CBCF58500D91C27 /* 11.jpg */,
-				D2E856E71CBCF58500D91C27 /* 12.jpg */,
-				D2E856E81CBCF58500D91C27 /* 13.jpg */,
-				D2E857011CBCF5EA00D91C27 /* 14.jpg */,
-				D2E856E91CBCF58500D91C27 /* 15.jpg */,
-				D2E856EA1CBCF58500D91C27 /* 16.jpg */,
-				D2E856EB1CBCF58500D91C27 /* 17.jpg */,
-				D235BB281CBE3DDD00A58378 /* 18.jpg */,
-				D235BB291CBE3DDD00A58378 /* 19.jpg */,
-				D235BB2A1CBE3DDD00A58378 /* 20.jpg */,
-				D235BB2B1CBE3DDD00A58378 /* 21.jpg */,
-				D235BB2C1CBE3DDD00A58378 /* 22.jpg */,
-				D235BB2D1CBE3DDD00A58378 /* 23.jpg */,
-				D235BB2E1CBE3DDD00A58378 /* 24.jpg */,
-				D235BB2F1CBE3DDD00A58378 /* 25.jpg */,
-				D235BB301CBE3DDD00A58378 /* 26.jpg */,
-				D235BB311CBE3DDD00A58378 /* 27.jpg */,
-				D268B15E1CBFA75300424780 /* 28.jpg */,
-				D268B1601CBFA79900424780 /* 29.jpg */,
 				D2BD74C31ACE38C20067F29A /* Launch Screen.xib */,
 				D23D54B91A0CAE1E00E515B0 /* Images.xcassets */,
 				D23D54AE1A0CAE1E00E515B0 /* Supporting Files */,
@@ -503,6 +514,7 @@
 				D2E856FA1CBCF58500D91C27 /* 12.jpg in Resources */,
 				D235BB361CBE3DDD00A58378 /* 22.jpg in Resources */,
 				D235BB321CBE3DDD00A58378 /* 18.jpg in Resources */,
+				D2064E0E1CC4BA710050F3BB /* close.png in Resources */,
 				D2E856F41CBCF58500D91C27 /* 6.jpg in Resources */,
 				D235BB3B1CBE3DDD00A58378 /* 27.jpg in Resources */,
 				D2E856F81CBCF58500D91C27 /* 10.jpg in Resources */,

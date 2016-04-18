@@ -45,8 +45,8 @@
 
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(30, 30, 40, 40);
-    button.backgroundColor = [UIColor redColor];
+    button.frame = CGRectMake(30, 30, 30, 30);
+    [button setBackgroundImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(aaaaaaa:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
@@ -73,6 +73,13 @@
     [cell getValueFromBQImageModel:model];
 //    cell.label.text = [NSString stringWithFormat:@"%ld",indexPath.item];
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 
