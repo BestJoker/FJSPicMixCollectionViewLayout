@@ -13,6 +13,7 @@
 @property (nonatomic,strong)UICollectionView * collectionView;
 @property (nonatomic,strong)NSMutableArray * dataArray;
 @property (nonatomic,strong)UICollectionViewFlowLayout * flowLayuot;
+@property (nonatomic) BOOL statusBarIsHidden;
 @end
 
 @implementation FJSBrowseViewController
@@ -29,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.statusBarIsHidden = NO;
     self.flowLayuot = [[UICollectionViewFlowLayout alloc] init];
     self.flowLayuot.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.flowLayuot.itemSize = CGSizeMake(ScreenWidth, ScreenHeight);
@@ -50,7 +52,29 @@
     [button addTarget:self action:@selector(aaaaaaa:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blackColor];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self performSelector:@selector(setStatusBarHidden)];
+}
+
+- (void)setStatusBarHidden
+{
+    self.statusBarIsHidden = YES;
+    [UIView animateWithDuration:.01
+                     animations:^{
+                         [self setNeedsStatusBarAppearanceUpdate];
+                     }];
+}
+
+
+-(BOOL)prefersStatusBarHidden
+{
+    return self.statusBarIsHidden;
 }
 
 -(UIStatusBarAnimation)preferredStatusBarUpdateAnimation
@@ -91,10 +115,6 @@
     //滑动过程中,消除之前的放大效果.
     [((PicBrowseCollectionViewCell *)cell) eliminateScale];
 }
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
