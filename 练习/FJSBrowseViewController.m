@@ -76,17 +76,9 @@
     PicBrowseCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PicBrowseCollectionViewCell" forIndexPath:indexPath];
     BQImageModel * model = [self.dataArray objectAtIndex:indexPath.item];
     [cell getValueFromBQImageModel:model];
-//    cell.label.text = [NSString stringWithFormat:@"%ld",indexPath.item];
+    cell.superViewController = self;
     return cell;
 }
-
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        
-//    }];
-}
-
 
 - (UICollectionView *)transitionCollectionView
 {

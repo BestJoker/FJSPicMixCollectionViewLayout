@@ -17,7 +17,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.imageView = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
-        self.imageView.backgroundColor = [UIColor orangeColor];
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:self.imageView];
     }

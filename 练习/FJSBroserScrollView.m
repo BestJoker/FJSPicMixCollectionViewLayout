@@ -56,6 +56,14 @@ static CGFloat const kMinZoom = 1.0f;
     doubleGesture.numberOfTapsRequired = 2;
     doubleGesture.numberOfTouchesRequired = 1;
     [self.imageView addGestureRecognizer:doubleGesture];
+    
+    // 添加单击手势，取消浏览
+    UITapGestureRecognizer *singleGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleGestureAction:)];
+    singleGesture.numberOfTapsRequired = 1;
+    singleGesture.numberOfTouchesRequired = 1;
+    [singleGesture requireGestureRecognizerToFail:doubleGesture];
+    [self.imageView addGestureRecognizer:singleGesture];
+
 }
 
 - (void)doubleGesture:(UITapGestureRecognizer *)tapGesture {
@@ -68,6 +76,15 @@ static CGFloat const kMinZoom = 1.0f;
     }
 
 }
+
+- (void)singleGestureAction:(UITapGestureRecognizer *)tapGesture
+{
+    [self setZoomScale:kMinZoom animated:YES];
+    if (self.tapBackBlcok) {
+        self.tapBackBlcok();
+    }
+}
+
 
 - (CGRect)zoomRectForScale:(CGFloat)scale withCenter:(CGPoint)touch {
     CGRect zoomRect = CGRectZero;

@@ -17,7 +17,13 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.imageView = [[FJSBroserScrollView alloc] initWithFrame:self.contentView.bounds];
-        self.imageView.backgroundColor = [UIColor orangeColor];
+        __block PicBrowseCollectionViewCell * newCell = self;
+        self.imageView.tapBackBlcok = ^()
+        {
+            [newCell.superViewController dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+        };
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:self.imageView];
     }
@@ -40,7 +46,6 @@
     CGFloat height = self.model.height / self.model.width * ScreenWidth;
     FJSSnapPlaceView *snapShotView = [[FJSSnapPlaceView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, height) ImageModel:self.model];
     return snapShotView;
-    
 }
 
 - (CGPoint)imageViewOringn
