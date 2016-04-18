@@ -86,6 +86,16 @@
 }
 
 
+-(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    //滑动过程中,消除之前的放大效果.
+    [((PicBrowseCollectionViewCell *)cell) eliminateScale];
+}
+
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

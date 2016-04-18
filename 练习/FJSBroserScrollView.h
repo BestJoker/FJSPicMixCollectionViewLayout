@@ -12,4 +12,5 @@
 @property (nonatomic,copy) void (^tapBackBlcok)();/** <单机图片消失的block */
 @property (nonatomic,strong)UIImage * image;
 - (void)setImageWithImageStr:(NSString *)imageStr;
+- (void)eliminateScale;
 @end

@@ -40,6 +40,11 @@
     self.imageView.image = model.image;
 }
 
+- (void)eliminateScale
+{
+    [self.imageView eliminateScale];
+}
+
 -(FJSSnapPlaceView *)snapShotForTransition
 {
     //由于图片放大是需要scrollview的配合,所以图片的实际高度,就与self.imageView不相同了.

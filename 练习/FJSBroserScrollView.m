@@ -120,7 +120,11 @@ static CGFloat const kMinZoom = 1.0f;
     _imageView.center = centerPoint;
 }
 
-
+- (void)eliminateScale
+{
+    self.scale = 1.0;
+    [self setZoomScale:self.scale animated:NO];
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
