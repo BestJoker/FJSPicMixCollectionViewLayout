@@ -24,7 +24,7 @@
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    self.dataArray = [NSMutableArray arrayWithObjects:@"FJSPicMixCollectionViewLayout",@"FJSPicCenterMaxCollectionViewFlowLayout",@"FJSWaterFlowCollectionViewFlowLayout",@"FJSWaterFlowMixCollectionViewFlowLayout", nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"FJSPicMixCollectionViewLayout", nil];
     
 }
 
