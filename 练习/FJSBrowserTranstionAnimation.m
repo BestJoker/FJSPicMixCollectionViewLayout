@@ -74,7 +74,8 @@
     UIView *blackViewContainer = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     blackViewContainer.backgroundColor = [UIColor blackColor];
     [containerView addSubview:blackViewContainer];
-
+    
+    //判断前往和原来的视图是否是navi,因为pixBrowseCollectionView中没有Naiv
     //判断前往和原来的视图是否是navi,因为pixBrowseCollectionView中没有Naiv
     UIViewController <FJSTranstionProtocol>* toVC = toViewController;
     UIViewController <FJSTranstionProtocol>* fromVC = fromViewController;

@@ -18,11 +18,9 @@
 		D2064DD11CC1DECC0050F3BB /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DC81CC1DECC0050F3BB /* UIScrollView+MJRefresh.m */; };
 		D2064DD21CC1DECC0050F3BB /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DCA1CC1DECC0050F3BB /* UIView+MJExtension.m */; };
 		D2064DF51CC48BB40050F3BB /* UICollectionView+FJSIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DF21CC48BB40050F3BB /* UICollectionView+FJSIndexPath.m */; };
-		D2064DFE1CC48C560050F3BB /* FJSBrowserTranstionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DF91CC48C560050F3BB /* FJSBrowserTranstionAnimation.m */; };
 		D2064DFF1CC48C560050F3BB /* FJSSnapPlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064DFB1CC48C560050F3BB /* FJSSnapPlaceView.m */; };
 		D2064E021CC48C5F0050F3BB /* FJSBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E011CC48C5F0050F3BB /* FJSBrowseViewController.m */; };
 		D2064E051CC48C940050F3BB /* PicBrowseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E041CC48C940050F3BB /* PicBrowseCollectionViewCell.m */; };
-		D2064E081CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E071CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m */; };
 		D2064E0B1CC492760050F3BB /* UIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E0A1CC492760050F3BB /* UIView+Add.m */; };
 		D2064E0E1CC4BA710050F3BB /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = D2064E0D1CC4BA710050F3BB /* close.png */; };
 		D2064E1A1CC4D5870050F3BB /* FJSBroserScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2064E191CC4D5870050F3BB /* FJSBroserScrollView.m */; };
@@ -54,6 +52,9 @@
 		D23D54CD1A0CAE1E00E515B0 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D54CC1A0CAE1E00E515B0 /* __Tests.m */; };
 		D268B15F1CBFA75300424780 /* 28.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D268B15E1CBFA75300424780 /* 28.jpg */; };
 		D268B1611CBFA79900424780 /* 29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D268B1601CBFA79900424780 /* 29.jpg */; };
+		D29B16A81CD2D1230066EA87 /* FJSPicMixCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D29B16A71CD2D1230066EA87 /* FJSPicMixCollectionViewLayout.m */; };
+		D29B16AD1CD2D2D60066EA87 /* FJSBrowserTranstionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D29B16AA1CD2D2D60066EA87 /* FJSBrowserTranstionAnimation.m */; };
+		D29B16AE1CD2D2D60066EA87 /* FJSBrowserDismissTranstionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D29B16AC1CD2D2D60066EA87 /* FJSBrowserDismissTranstionAnimation.m */; };
 		D2BD74C41ACE38C20067F29A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2BD74C31ACE38C20067F29A /* Launch Screen.xib */; };
 		D2E856EE1CBCF58500D91C27 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2E856DB1CBCF58500D91C27 /* 0.jpg */; };
 		D2E856EF1CBCF58500D91C27 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2E856DC1CBCF58500D91C27 /* 1.jpg */; };
@@ -73,7 +74,6 @@
 		D2E856FD1CBCF58500D91C27 /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2E856EA1CBCF58500D91C27 /* 16.jpg */; };
 		D2E856FE1CBCF58500D91C27 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2E856EB1CBCF58500D91C27 /* 17.jpg */; };
 		D2E857021CBCF5EA00D91C27 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2E857011CBCF5EA00D91C27 /* 14.jpg */; };
-		D2E857051CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E857041CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.m */; };
 		D2E857081CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E857071CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -110,8 +110,6 @@
 		D2064DCA1CC1DECC0050F3BB /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		D2064DF11CC48BB40050F3BB /* UICollectionView+FJSIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+FJSIndexPath.h"; sourceTree = "<group>"; };
 		D2064DF21CC48BB40050F3BB /* UICollectionView+FJSIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+FJSIndexPath.m"; sourceTree = "<group>"; };
-		D2064DF81CC48C560050F3BB /* FJSBrowserTranstionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSBrowserTranstionAnimation.h; sourceTree = "<group>"; };
-		D2064DF91CC48C560050F3BB /* FJSBrowserTranstionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowserTranstionAnimation.m; sourceTree = "<group>"; };
 		D2064DFA1CC48C560050F3BB /* FJSSnapPlaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSSnapPlaceView.h; sourceTree = "<group>"; };
 		D2064DFB1CC48C560050F3BB /* FJSSnapPlaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSSnapPlaceView.m; sourceTree = "<group>"; };
 		D2064DFC1CC48C560050F3BB /* FJSTranstionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSTranstionProtocol.h; sourceTree = "<group>"; };
@@ -119,8 +117,6 @@
 		D2064E011CC48C5F0050F3BB /* FJSBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowseViewController.m; sourceTree = "<group>"; };
 		D2064E031CC48C940050F3BB /* PicBrowseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicBrowseCollectionViewCell.h; sourceTree = "<group>"; };
 		D2064E041CC48C940050F3BB /* PicBrowseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicBrowseCollectionViewCell.m; sourceTree = "<group>"; };
-		D2064E061CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSBrowserDismissTranstionAnimation.h; sourceTree = "<group>"; };
-		D2064E071CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowserDismissTranstionAnimation.m; sourceTree = "<group>"; };
 		D2064E091CC492760050F3BB /* UIView+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Add.h"; sourceTree = "<group>"; };
 		D2064E0A1CC492760050F3BB /* UIView+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Add.m"; sourceTree = "<group>"; };
 		D2064E0D1CC4BA710050F3BB /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
@@ -162,6 +158,12 @@
 		D23D54CC1A0CAE1E00E515B0 /* __Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tests.m; sourceTree = "<group>"; };
 		D268B15E1CBFA75300424780 /* 28.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 28.jpg; sourceTree = "<group>"; };
 		D268B1601CBFA79900424780 /* 29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 29.jpg; sourceTree = "<group>"; };
+		D29B16A61CD2D1230066EA87 /* FJSPicMixCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSPicMixCollectionViewLayout.h; sourceTree = "<group>"; };
+		D29B16A71CD2D1230066EA87 /* FJSPicMixCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSPicMixCollectionViewLayout.m; sourceTree = "<group>"; };
+		D29B16A91CD2D2D60066EA87 /* FJSBrowserTranstionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSBrowserTranstionAnimation.h; sourceTree = "<group>"; };
+		D29B16AA1CD2D2D60066EA87 /* FJSBrowserTranstionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowserTranstionAnimation.m; sourceTree = "<group>"; };
+		D29B16AB1CD2D2D60066EA87 /* FJSBrowserDismissTranstionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSBrowserDismissTranstionAnimation.h; sourceTree = "<group>"; };
+		D29B16AC1CD2D2D60066EA87 /* FJSBrowserDismissTranstionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSBrowserDismissTranstionAnimation.m; sourceTree = "<group>"; };
 		D2BD74C31ACE38C20067F29A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		D2E856DB1CBCF58500D91C27 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		D2E856DC1CBCF58500D91C27 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -181,8 +183,6 @@
 		D2E856EA1CBCF58500D91C27 /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
 		D2E856EB1CBCF58500D91C27 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
 		D2E857011CBCF5EA00D91C27 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
-		D2E857031CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSPicMixCollectionViewLayout.h; sourceTree = "<group>"; };
-		D2E857041CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSPicMixCollectionViewLayout.m; sourceTree = "<group>"; };
 		D2E857061CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSPicCenterMaxCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		D2E857071CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSPicCenterMaxCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,12 +248,12 @@
 			children = (
 				D2E857061CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.h */,
 				D2E857071CBD083900D91C27 /* FJSPicCenterMaxCollectionViewFlowLayout.m */,
-				D2E857031CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.h */,
-				D2E857041CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.m */,
 				D235BB111CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.h */,
 				D235BB121CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.m */,
 				D235BB251CBE3BE700A58378 /* FJSWaterFlowMixCollectionViewFlowLayout.h */,
 				D235BB261CBE3BE700A58378 /* FJSWaterFlowMixCollectionViewFlowLayout.m */,
+				D29B16A61CD2D1230066EA87 /* FJSPicMixCollectionViewLayout.h */,
+				D29B16A71CD2D1230066EA87 /* FJSPicMixCollectionViewLayout.m */,
 			);
 			name = FlowLayout;
 			sourceTree = "<group>";
@@ -296,10 +296,10 @@
 		D2064DEC1CC48B9A0050F3BB /* FJSTransitionAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				D2064DF81CC48C560050F3BB /* FJSBrowserTranstionAnimation.h */,
-				D2064DF91CC48C560050F3BB /* FJSBrowserTranstionAnimation.m */,
-				D2064E061CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.h */,
-				D2064E071CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m */,
+				D29B16A91CD2D2D60066EA87 /* FJSBrowserTranstionAnimation.h */,
+				D29B16AA1CD2D2D60066EA87 /* FJSBrowserTranstionAnimation.m */,
+				D29B16AB1CD2D2D60066EA87 /* FJSBrowserDismissTranstionAnimation.h */,
+				D29B16AC1CD2D2D60066EA87 /* FJSBrowserDismissTranstionAnimation.m */,
 				D2064DFA1CC48C560050F3BB /* FJSSnapPlaceView.h */,
 				D2064DFB1CC48C560050F3BB /* FJSSnapPlaceView.m */,
 				D2064DFC1CC48C560050F3BB /* FJSTranstionProtocol.h */,
@@ -555,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D235BB101CBE18B500A58378 /* PicMixViewController.m in Sources */,
+				D29B16AE1CD2D2D60066EA87 /* FJSBrowserDismissTranstionAnimation.m in Sources */,
 				D23D54B81A0CAE1E00E515B0 /* AppDelegate.m in Sources */,
 				D2064DCF1CC1DECC0050F3BB /* MJRefreshHeaderView.m in Sources */,
 				D2064E051CC48C940050F3BB /* PicBrowseCollectionViewCell.m in Sources */,
@@ -564,11 +565,10 @@
 				D2064E1A1CC4D5870050F3BB /* FJSBroserScrollView.m in Sources */,
 				D2064DCE1CC1DECC0050F3BB /* MJRefreshFooterView.m in Sources */,
 				D23D54B41A0CAE1E00E515B0 /* main.m in Sources */,
-				D2064E081CC4912C0050F3BB /* FJSBrowserDismissTranstionAnimation.m in Sources */,
-				D2064DFE1CC48C560050F3BB /* FJSBrowserTranstionAnimation.m in Sources */,
+				D29B16AD1CD2D2D60066EA87 /* FJSBrowserTranstionAnimation.m in Sources */,
+				D29B16A81CD2D1230066EA87 /* FJSPicMixCollectionViewLayout.m in Sources */,
 				D2064E021CC48C5F0050F3BB /* FJSBrowseViewController.m in Sources */,
 				D235BB0A1CBE188B00A58378 /* MainViewController.m in Sources */,
-				D2E857051CBD079B00D91C27 /* FJSPicMixCollectionViewLayout.m in Sources */,
 				D2064DCC1CC1DECC0050F3BB /* MJRefreshBaseView.m in Sources */,
 				D2064DD01CC1DECC0050F3BB /* UIScrollView+MJExtension.m in Sources */,
 				D235BB131CBE1C3700A58378 /* FJSWaterFlowCollectionViewFlowLayout.m in Sources */,

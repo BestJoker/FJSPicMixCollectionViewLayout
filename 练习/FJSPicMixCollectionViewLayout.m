@@ -45,8 +45,8 @@
         width = width + model.width;
         scaleSum = scaleSum + model.whScale;
         //换行之后需要重新清空累计的宽度 同时保存下一个currentIndex从第几行开始.
-        //累计图片宽度,如果宽度超过了屏宽减去间距,则换行
-        if (width >= ScreenWidth - self.minimumInteritemSpacing * (i - currentIndex - 1)) {
+        //累计图片宽度,如果宽度超过了屏宽减去间距,则换行(这种方式存在一定的问题,依赖于图片的原始高度来进行排布,不过服务器没法根据客户端来进行图片匹配,所以继续研究了格瓦拉之后,找到了它有一个图片最大高度,即屏幕的一半,所以采用比例和的方式来进行约束.)
+        if (scaleSum >= 2.0) {
             [self setAttributesFromCurrentIndex:currentIndex DestionIndex:i scaleSum:scaleSum];
             //换行之后需要重新清空累计的宽度 同时保存下一个currentIndex从第几行开始.
             width = 0.f;
@@ -92,7 +92,13 @@
          width和height都有计算好了.
          */
         CGFloat orignX = oldAttributes?CGRectGetMaxX(oldAttributes.frame) + self.minimumInteritemSpacing:0;
-        attributes.frame = CGRectMake(orignX, self.contentHeight, width, height);
+        if (destionIndex == currnetIndex && self.modelArray.count - 1 == currnetIndex && model.whScale < 2.0) {
+            attributes.frame = CGRectMake(orignX, self.contentHeight, ScreenWidth, ScreenWidth * 0.5);
+            height = ScreenWidth * 0.5;
+        }else
+        {
+            attributes.frame = CGRectMake(orignX, self.contentHeight, width, height);
+        }
         //        NSLog(@"oldAttributes == %f\nself.contentHeight == %f\nwidth == %f\nheight == %f",CGRectGetMaxX(oldAttributes.frame),self.contentHeight,width,height);
         //        NSLog(@"第%ld个到第%ld个在一行",currnetIndex,destionIndex);
         [self.attributesArray addObject:attributes];

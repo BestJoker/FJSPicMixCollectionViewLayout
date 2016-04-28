@@ -75,6 +75,7 @@
     [containerView addSubview:blackViewContainer];
 
     //判断前往和原来的视图是否是navi,因为pixBrowseCollectionView中没有Naiv
+    //判断前往和原来的视图是否是navi,因为pixBrowseCollectionView中没有Naiv
     UIViewController <FJSTranstionProtocol,PicMixViewControllerProtocol>* toVC = toViewController;
     UIViewController <FJSTranstionProtocol,PicMixViewControllerProtocol>* fromVC = fromViewController;
     if ([toViewController isKindOfClass:[UINavigationController class]]) {
@@ -100,7 +101,7 @@
     
     //这里由于imageView和cell并不是完全填充的,所以需要获取imageView
     CGPoint leftUpperPoint = [cell imageViewOringn];
-    
+        
     [snapShot setOrigin:leftUpperPoint];
     
     [toVC viewWillAppearWithCurrentIndex:indexPath.item];
@@ -112,14 +113,17 @@
     
     CGPoint toPoint = [toCell convertPoint:CGPointZero toView:nil];
     
+    CGPoint centerPoint = CGPointMake(toPoint.x + toCell.bounds.size.width * 0.5, toPoint.y + toCell.bounds.size.height * 0.5);
+
     NSTimeInterval transitionDuration = [self transitionDuration:transitionContext];
     
-    CGFloat animationScale = toCell.bounds.size.width / ScreenWidth;
+    CGFloat animationScaleX = toCell.bounds.size.width / snapShot.bounds.size.width;
+//    CGFloat animationScaleY = toCell.bounds.size.height / snapShot.bounds.size.height;
     
     [UIView animateWithDuration:transitionDuration animations:^{
-        snapShot.transform = CGAffineTransformMakeScale(animationScale,
-                                                        animationScale);
-        [snapShot setOrigin:toPoint];
+        snapShot.transform = CGAffineTransformMakeScale(animationScaleX,
+                                                        animationScaleX);
+        [snapShot setCenter:centerPoint];
         blackViewContainer.alpha = 0.f;
     } completion:^(BOOL finished) {
         // When we complete, tell the transition context
